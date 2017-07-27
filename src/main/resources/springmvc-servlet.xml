@@ -11,11 +11,14 @@ default-lazy-init="true">
 
 	<!-- 该文件中将配置两项重要的mvc特性：ViewResolver,负责为DispatcherServlet查找ModelAndView的视图解析器  -->
 	<!-- 自动搜索@Controller标注的类 -->
-    <context:component-scan base-package="com.wh">  
+    <context:component-scan base-package="com.wh.action">  
         <!-- 排除扫描 标签 -->
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>   
-    </context:component-scan>  
+    </context:component-scan> 
     
+    <mvc:annotation-driven />
+     
+    <!-- 支持返回json(避免IE在ajax请求时，返回json出现下载 ) -->  
     <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
         <!-- 注册JASON转换器 -->
         <property name="messageConverters">  

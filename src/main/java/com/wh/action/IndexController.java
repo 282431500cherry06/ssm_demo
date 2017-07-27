@@ -2,13 +2,20 @@ package com.wh.action;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.log4j.Logger;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
+@Controller
+@RequestMapping("/indexController")
 public class IndexController {
 
+	static Logger logger = Logger.getLogger(IndexController.class);
 	@RequestMapping("/index")
-	public String list(HttpServletRequest request){
-		
-		return "index";
+	public ModelAndView list(HttpServletRequest request,ModelMap modelMap){
+		logger.debug("µ÷ÊÔÐÅÏ¢");
+		return new ModelAndView("pages/index",modelMap);
 	}
 }

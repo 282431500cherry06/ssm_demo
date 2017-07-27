@@ -1,4 +1,14 @@
+### Eclipse template
+.classpath
+.project
+.settings/
 
 ### Others
+.svn
+*.class
+log
+.gradle
 target/
+~
 *.jar
+rebel.xml
