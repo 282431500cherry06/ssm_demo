@@ -8,14 +8,14 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+
 @Controller
-@RequestMapping("/indexController")
 public class IndexController {
 
 	static Logger logger = Logger.getLogger(IndexController.class);
 	@RequestMapping("/index")
 	public ModelAndView list(HttpServletRequest request,ModelMap modelMap){
-		logger.debug("µ˜ ‘–≈œ¢");
-		return new ModelAndView("pages/index",modelMap);
+		logger.debug("Ë∞ÉËØï‰ø°ÊÅØ");
+		return new ModelAndView("index",modelMap);
 	}
 }
